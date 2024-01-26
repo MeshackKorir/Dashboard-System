@@ -31,7 +31,7 @@ body.addEventListener("submit", (e) => {
         else {
             Books.push(bookDetails);
         }
-        // instance.displayBooks()
+        instance.displayBooks();
         names.value = "";
         image.value = "";
         author.value = "";
@@ -68,14 +68,6 @@ class Products {
             updatebtn.addEventListener('click', () => {
                 this.updateBooks(index);
             });
-            // profile.appendChild(URL)
-            // profile.appendChild(names)
-            // profile.appendChild(image)
-            // profile.appendChild(author)
-            // profile.appendChild(title)
-            // profile.appendChild(deletebtn)
-            // profile.appendChild(updatebtn)
-            // Books.appendChild(book)
         });
     }
     deleteBooks(index) {
@@ -94,3 +86,5 @@ class Products {
         date_established.value = user.date_established;
     }
 }
+let instance = new Products();
+instance.displayBooks();

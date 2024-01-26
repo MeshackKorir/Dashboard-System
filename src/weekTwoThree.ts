@@ -51,7 +51,7 @@ body.addEventListener("submit", (e)=>{
             Books.push(bookDetails)
         }
 
-        // instance.displayBooks()
+        instance.displayBooks()
 
         names.value = ""
         image.value = ""
@@ -87,11 +87,7 @@ class Products{
             department.textContent = book.title 
             
             let date_established = document.createElement('td') as HTMLTableCellElement
-            date_established.textContent = book.date_established 
-            
-
-            
-
+            date_established.textContent = book.date_established  
             let deletebtn = document.createElement('button') as HTMLButtonElement
             deletebtn.textContent = "Delete"
             deletebtn.style.backfaceVisibility = 'red'
@@ -106,15 +102,6 @@ class Products{
                 this.updateBooks(index)
             })
 
-            // profile.appendChild(URL)
-            // profile.appendChild(names)
-            // profile.appendChild(image)
-            // profile.appendChild(author)
-            // profile.appendChild(title)
-            // profile.appendChild(deletebtn)
-            // profile.appendChild(updatebtn)
-
-            // Books.appendChild(book)
 
         })
     }
@@ -145,6 +132,9 @@ class Products{
 
 }
 
+let instance = new Products()
+
+instance.displayBooks()
 
 
 
